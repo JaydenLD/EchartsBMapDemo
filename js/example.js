@@ -195,7 +195,73 @@
 	    	]});
 		   
 		}
+		
+		function changeOption2(){
+		     BMapExt.setOption({series : [
+	                {
+	                    name:'北京',
+	                    type:'map',
+	                    mapType: 'none',
+	                    data:[],
+	                    geoCoord: {
+			                '海淀区': [116.30317,39.966113],
+			                '西城区': [116.380784,39.932041],
+			                '东城区': [116.450784,39.932041],
+			                '朝阳区': [116.500784,40.032041],
+	                    },
+	
+	                    markLine : {
+	                        smooth:true,
+	                        effect : {
+	                            show: true,
+	                            scaleSize: 1,
+	                            period: 30,
+	                            color: '#fff',
+	                            shadowBlur: 10
+	                        },
+	                        itemStyle : {
+	                            normal: {
+	                                borderWidth:1,
+	                                lineStyle: {
+	                                    type: 'solid',
+	                                    shadowBlur: 10
+	                                }
+	                            }
+	                        },
+	                        data : [
+	                            [{name:'海淀区'},{name:'西城区'}],
+	                            [{name:'西城区'},{name:'东城区'}],
+	                            [{name:'东城区'},{name:'朝阳区'}]
+	                            
+	                        ]
+	                    },
+	                    markPoint : {
+	                        symbol:'emptyCircle',
+	                        symbolSize : function (v){
+	                            return 10 + v/10
+	                        },
+	                        effect : {
+	                            show: true,
+	                            shadowBlur : 0
+	                        },
+	                        itemStyle:{
+	                            normal:{
+	                                label:{show:false}
+	                            }
+	                        },
+	                        data : [
+		                        {name:'海淀区'},
+		                        {name:'西城区'},
+		                        {name:'东城区'},
+		                        {name:'朝阳区'}
+	                        ]
+	                    }
+	                },
+	    	]});
+		   
+		}
         window.setTimeout(changeOption,2000);  
+        window.setTimeout(changeOption2,4000);  
     }
 );
 })();
