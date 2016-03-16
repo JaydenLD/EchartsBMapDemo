@@ -36,7 +36,7 @@
 
 
         option = {
-	            color: ['gold','aqua','lime'],
+	            color: ['blue'],
 	            title : {
 	                text: '模拟迁徙',
 	                subtext:'数据纯属虚构',
@@ -88,17 +88,18 @@
 	                        smooth:true,
 	                        effect : {
 	                            show: true,
-	                            scaleSize: 1,
+	                            scaleSize: 0.5,
 	                            period: 30,
 	                            color: '#fff',
 	                            shadowBlur: 10
 	                        },
 	                        itemStyle : {
 	                            normal: {
-	                                borderWidth:1,
+	                                borderWidth:3,
 	                                lineStyle: {
 	                                    type: 'solid',
-	                                    shadowBlur: 10
+	                                    shadowBlur: 10,
+	                                    color:'#1097DB'
 	                                }
 	                            }
 	                        },
@@ -118,7 +119,8 @@
 	                        },
 	                        itemStyle:{
 	                            normal:{
-	                                label:{show:false}
+	                                label:{show:false},
+	                                color:'#1097DB'
 	                            }
 	                        },
 	                        data : [
@@ -151,17 +153,18 @@
 	                        smooth:true,
 	                        effect : {
 	                            show: true,
-	                            scaleSize: 1,
+	                            scaleSize: 0.5,
 	                            period: 30,
 	                            color: '#fff',
 	                            shadowBlur: 10
 	                        },
 	                        itemStyle : {
 	                            normal: {
-	                                borderWidth:1,
+	                                borderWidth:3,
 	                                lineStyle: {
 	                                    type: 'solid',
-	                                    shadowBlur: 10
+	                                    shadowBlur: 10,
+	                                    color:'#1097DB'
 	                                }
 	                            }
 	                        },
@@ -182,7 +185,8 @@
 	                        },
 	                        itemStyle:{
 	                            normal:{
-	                                label:{show:false}
+	                                label:{show:false},
+	                                color:'#1097DB'
 	                            }
 	                        },
 	                        data : [
@@ -214,17 +218,18 @@
 	                        smooth:true,
 	                        effect : {
 	                            show: true,
-	                            scaleSize: 1,
+	                            scaleSize: 0.5,
 	                            period: 30,
 	                            color: '#fff',
 	                            shadowBlur: 10
 	                        },
 	                        itemStyle : {
 	                            normal: {
-	                                borderWidth:1,
+	                                borderWidth:3,
 	                                lineStyle: {
 	                                    type: 'solid',
-	                                    shadowBlur: 10
+	                                    shadowBlur: 10,
+	                                    color:'#1097DB'
 	                                }
 	                            }
 	                        },
@@ -246,8 +251,11 @@
 	                        },
 	                        itemStyle:{
 	                            normal:{
-	                                label:{show:false}
-	                            }
+	                                label:{show:false},
+	                                color:'#1097DB'
+	                            },
+	                            
+	                            
 	                        },
 	                        data : [
 		                        {name:'海淀区'},
