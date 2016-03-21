@@ -31,12 +31,10 @@
         var point = new BMap.Point(startPoint.x, startPoint.y);
         map.centerAndZoom(point, 11);
         map.enableScrollWheelZoom(true);
-        
-        
-
 
         option = {
-	            color: ['blue'],
+        	
+	            color: ['gold'],
 	            title : {
 	                text: '模拟迁徙',
 	                subtext:'数据纯属虚构',
@@ -61,7 +59,7 @@
 	                }
 	            },
 	            toolbox: {
-	                show : true,
+	                show : false,
 	                orient : 'vertical',
 	                x: 'right',
 	                y: 'center',
