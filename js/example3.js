@@ -31,7 +31,7 @@
         var point = new BMap.Point(startPoint.x, startPoint.y);
         map.centerAndZoom(point, 5);
         map.enableScrollWheelZoom(true);
-var placeList = [
+		var placeList = [
 			    {name:'上海', geoCoord:[121.48, 31.22]},
 			    {name:'厦门', geoCoord:[118.1, 24.46]},
 			    {name:'太原', geoCoord:[112.53, 37.87]},
@@ -189,8 +189,8 @@ option = {
             name: '强',
             type: 'map',
             mapType: 'none',
-            hoverable: false,
-            roam:true,
+//          hoverable: false,
+//          roam:true,
             data : [],
             markPoint : {
                 symbol : 'diamond',
