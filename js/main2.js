@@ -146,6 +146,7 @@ define(function (require) {
          * @public
          */
         self.geoCoord2Pixel = function (geoCoord) {
+        	
             var point = new BMap.Point(geoCoord[0], geoCoord[1]);
             var pos = self._map.pointToOverlayPixel(point);
             return [pos.x, pos.y];
@@ -235,14 +236,14 @@ define(function (require) {
          * @public
          */
         self.setOption = function (option, notMerge) {
-        	
         		
 	            var series = option.series || {};
-	
 	            // 记录所有的geoCoord
 	            for (var i = 0, item; item = series[i++];) {
 	                var geoCoord = item.geoCoord;
+	                
 	                if (geoCoord) {
+	                	
 	                    for (var k in geoCoord) {
 	                        self._geoCoord[k] = geoCoord[k];
 	                    }
@@ -269,7 +270,9 @@ define(function (require) {
 	                    }
 	                }
 	            }
+	            
             self._ec.setOption(option, notMerge);
+           
         }
 
         /**
@@ -279,7 +282,8 @@ define(function (require) {
          * @param {Object} geoCoord
          */
         self._AddPos = function (obj) {
-            var coord = this._geoCoord[obj.name]
+            var coord = this._geoCoord[obj.name];	
+            dump(obj)
             var pos = this.geoCoord2Pixel(coord);
             obj.x = pos[0] - self._mapOffset[0];
             obj.y = pos[1] - self._mapOffset[1];
