@@ -146,7 +146,6 @@ define(function (require) {
          * @public
          */
         self.geoCoord2Pixel = function (geoCoord) {
-        	dump(geoCoord)
             var point = new BMap.Point(geoCoord[0], geoCoord[1]);
             var pos = self._map.pointToOverlayPixel(point);
             return [pos.x, pos.y];

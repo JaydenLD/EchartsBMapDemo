@@ -7,7 +7,7 @@
             {
                 name: 'BMap',
                 location: 'js',
-                main: 'main2'
+                main: 'main'
             }
         ]
     });
@@ -65,11 +65,7 @@ var placeList = [
         
 option = {
     
-    color: [
-        'rgba(255, 255, 255, 0.8)',
-        'rgba(14, 241, 242, 0.8)',
-        'rgba(37, 140, 249, 0.8)'
-    ],
+    color: ['blue','aqua','lime'],
     title : {
         text: '大规模MarkPoint特效',
         subtext: '纯属虚构',
@@ -145,7 +141,7 @@ option = {
 			},
             data : [],
             markPoint : {
-                symbolSize: 2,
+                symbolSize: 4,
                 large: true,
                 effect : {
                     show: true
@@ -170,7 +166,7 @@ option = {
             mapType: 'none',
             data : [],
             markPoint : {
-                symbolSize: 3,
+                symbolSize: 6,
                 large: true,
                 effect : {
                     show: true
@@ -198,7 +194,7 @@ option = {
             data : [],
             markPoint : {
                 symbol : 'diamond',
-                symbolSize: 6,
+                symbolSize: 8,
                 large: true,
                 effect : {
                     show: true
