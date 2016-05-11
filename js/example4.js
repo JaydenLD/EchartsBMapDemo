@@ -312,7 +312,6 @@
 		    ]
 		};
                     
-dump(option)
         var myChart = BMapExt.initECharts(container);
         window.onresize = myChart.resize;
         BMapExt.setOption(option);
