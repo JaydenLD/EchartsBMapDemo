@@ -1,3 +1,7 @@
+/**
+ * 此文件用于激活sly插件，包括各种option设定和event绑定，有诸多examples，
+ * heatmap中选用的是Force Centered Navigation例子，绑定active事件，触发changePoints方法
+ */
 jQuery(function($){
 	'use strict';
 

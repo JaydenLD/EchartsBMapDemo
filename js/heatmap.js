@@ -8,7 +8,7 @@ var map = new BMap.Map("container");          // 创建地图实例
 //  {"lng":121.418261,"lat":31.221984,"count":50},
 //  {"lng":121.423332,"lat":31.216532,"count":51},
 //  {"lng":121.425867,"lat":31.218989,"count":8}];
-    
+    //随机生成点，points为二维数组
     var points = [];
     for (j = 0;j<48;j++) {
     	var point = [];
@@ -74,7 +74,8 @@ var map = new BMap.Map("container");          // 创建地图实例
     }
     //默认显示热力图
     openHeatmap();
-    //选择不同时间点后，改变数据，此方法在heatmap.js中绑定触发
+    
+    //选择不同时间点后，改变数据，此方法在heatmap.js中绑定触发，itemIndex代表所选择item的索引值
 	function changePoints(itemIndex){
 		heatmapOverlay.setDataSet({data:points[itemIndex],max:100});
 	}
