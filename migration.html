@@ -57,14 +57,17 @@
     	<script src="js/dist/echarts.js" type="text/javascript" charset="utf-8"></script>
     	<script src="js/jquery-1.11.3.min.js"></script>
     	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&amp;ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+    	<!--sly滑块插件需要的三个js文件-->
 		<script src="js/plugins.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/sly.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/horizontal.js" type="text/javascript" charset="utf-8"></script>
+		<!--调试插件-->
 		<script src="js/dump.js"></script>
 		
 		<script src="js/migration.js" type="text/javascript"></script>
 		
 		<script type="text/javascript">
+		//百度地图扩展
 		var BMapExt;
 		//所需数据
 		var loc_name = ["上海西站","虹桥机场","复旦大学","世纪公园","上海站","上海大学","上海南站","绍兴公园","龙华机场","上海浦东国际机场"];
@@ -218,7 +221,7 @@
 		        });
 				
 
-			        BMapExt.setOption(option,true); 
+			    BMapExt.setOption(option,true); 
 		}
 		
 		var topCityOut = [{

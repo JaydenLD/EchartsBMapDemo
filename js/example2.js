@@ -89,7 +89,7 @@
                        "featureType": "highway",
                        "elementType": "labels",
                        "stylers": {
-                            "visibility": "off"
+                            "visibility": "on"
                        }
                   },
                   {
@@ -167,7 +167,7 @@
                        "featureType": "label",
                        "elementType": "all",
                        "stylers": {
-                            "visibility": "off"
+                            "visibility": "on"
                        }
                   }
             ]
