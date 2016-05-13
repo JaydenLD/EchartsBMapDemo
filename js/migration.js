@@ -21,7 +21,7 @@
     function (echarts, BMapExtension) {
   
         // 初始化地图
-        var BMapExt = new BMapExtension($('#main')[0], BMap, require('echarts'), require('zrender'));
+        BMapExt = new BMapExtension($('#main')[0], BMap, require('echarts'), require('zrender'));
         var map = BMapExt.getMap();
         var container = BMapExt.getEchartsContainer();
         var startPoint = {
@@ -29,7 +29,7 @@
             y: 31.228153
         };
         var point = new BMap.Point(startPoint.x, startPoint.y);
-        map.centerAndZoom(point, 13);
+        map.centerAndZoom(point, 12);
         map.enableScrollWheelZoom(true);
 
 		var effect = {
@@ -46,21 +46,35 @@
 		        x:'center',
 		        y:'top',
 		        textStyle: {
-		            color: 'white'
+		            color: 'black'
 		        }
 		    },
 		    legend: {
-		        show: true,
+		        show: false,
 		        selected: {},
 		        x: 'left',
 		        orient: 'vertical',
-		        textStyle: {
-		            color: 'white'
+		        selectedMode: 'single',
+		        selected: {
+		            '2:00-4:00' : false,
+		            '4:00-6:00' : false
 		        },
-		        data: []
+		        data: time
 		    },
+		    toolbox: {
+			    show : false,
+			    orient : 'vertical',
+			    x: 'right',
+			    y: 'center',
+			    feature : {
+			        mark : {show: true},
+			        dataView : {show: true, readOnly: false},
+			        restore : {show: true},
+			        saveAsImage : {show: true}
+			    }
+			},
 		    series : [{
-		        name: "Migration",
+		        name: "",
 		        type: 'map',
 		        mapType: 'none',
 		
@@ -145,20 +159,21 @@
 		
 			createAllLine();
 			option.series[0].markLine.data = allLine.sort(function (a, b) {
-		            return b.num - a.num
-		        }).slice(0, 3000).map(function (line) {
-		            return [{
-		                name: getGeoCoord(line.start)   
-		            }, {
-		                name: getGeoCoord(line.end)
-		            }]
-		        });
-		
-		        option.series[0].markPoint.data = topCityOut.map(function (point) {
-		            return {
-		                name: getGeoCoord(point.name)
-		            }
-		        });
+	            return b.num - a.num
+	        }).slice(0, 3000).map(function (line) {
+	            return [{
+	                name: getGeoCoord(line.start)   
+	            }, {
+	                name: getGeoCoord(line.end)
+	            }]
+	        });
+	
+	        option.series[0].markPoint.data = topCityOut.map(function (point) {
+	            return {
+	                name: getGeoCoord(point.name)
+	            }
+	        });
+			
 				var myChart = BMapExt.initECharts(container);
 		        window.onresize = myChart.resize;
 		        BMapExt.setOption(option); 
